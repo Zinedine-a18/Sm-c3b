@@ -2,7 +2,7 @@
 
 **Nom de l’app :** ZL DESIGN
 
-**En une phrase, elle sert à :** permettre aux clubs, athlètes et associations de découvrir mes réalisations (mini-portfolio filtrable par catégorie Branding / Sport Design), de commander une affiche et de me contacter.
+**En une phrase, elle sert à :** vendre mes services de design sportif : les clubs, athlètes et associations voient mon mini-portfolio (Branding / Sport Design), commandent une affiche, laissent un avis, partagent leur visuel et me contactent (message ou rendez-vous en personne).
 
 **À qui (prénom + âge + situation) :** Marc, 34 ans, responsable communication bénévole d’un club de basket régional, qui a besoin d’une affiche de match rapidement sans passer par une agence.
 
@@ -10,4 +10,4 @@
 
 **Les données (inventées) ressemblent à :** 
 
-**Pourquoi ce n’est pas trop grand pour 4 semaines de code :** l’app se limite à 3 pages simples (portfolio avec filtre par catégorie, formulaire de commande d’affiche, formulaire de contact). Pas de paiement en ligne ni de compte utilisateur : les demandes sont seulement envoyées et affichées.
+**Pourquoi ce n’est pas trop grand pour 4 semaines de code :** l’app se limite à des pages simples : portfolio filtrable, formulaire de commande, avis (note + commentaire), bouton de partage et formulaire de contact / demande de rendez-vous. Pas de paiement en ligne ni de compte utilisateur.
