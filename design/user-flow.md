@@ -17,7 +17,7 @@
    *Feedback :* le formulaire s’ouvre avec le type d’affiche déjà sélectionné (Match).
 5. **Formulaire de commande** — Il remplit club, date du match, infos, e-mail, puis touche « Envoyer ma commande ».  
    *Feedback :* le bouton affiche « Envoi… » puis l’écran change.
-6. **Confirmation** — « Commande envoyée ! Réponse sous 48 h. » + boutons « Partager » et « Me contacter ».  
+6. **Confirmation** — « Commande envoyée ! Réponse sous 48 h. » + boutons « Partager », « Me contacter » et « Retour au portfolio » (envoi simulé dans le prototype).  
    *Objectif accompli :* commande passée en moins de 3 minutes.
 
 ## Variante d’échec (optionnel)
