@@ -29,6 +29,8 @@
 
     bouton.addEventListener("click", function () {
       n = n + 1;
+      // Correction : on recopie la boîte n dans la vitrine (l'écran).
+      document.getElementById("affiche").textContent = n;
       console.log("n vaut maintenant", n);
     });
   </script>
