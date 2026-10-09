@@ -48,6 +48,16 @@ Marc, 34 ans, responsable communication bénévole d’un club de basket. Il uti
 
 L’app est un prototype : l’envoi des commandes et des messages, la demande de rendez-vous, l’enregistrement des avis et le partage sont **simulés** (données en JavaScript / stockage local, pas de serveur ni d’e-mail réel). L’écran de confirmation l’indique.
 
+## Données (JSON)
+
+Un fichier `data/realisations.json` avec **30 fiches inventées** de réalisations. Chaque fiche contient : titre, catégorie (Branding / Sport Design), client, image, prix « dès … CHF », délai, note moyenne et avis.
+
+## Micro-interactions (3)
+
+1. **Filtre** : la puce choisie passe en orange et le nombre de réalisations se met à jour (« 6 réalisations »).
+2. **Envoi de commande** : le bouton affiche « Envoi… » puis l'écran de confirmation apparaît avec une coche animée.
+3. **Cartes** : au survol ou au focus clavier, la carte se soulève légèrement (ombre plus forte).
+
 ## Ambiance visuelle
 
 Audacieuse, premium, sportive. Dans le même style que mon site zinedinelakhbir.ch : grand bandeau orange, gros titres en majuscules, cartes numérotées arrondies.
