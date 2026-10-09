@@ -51,3 +51,18 @@ Testée sur la page en ligne (`index.html`, GitHub Pages) avec Tab / Entrée :
 
 Avant : deux boutons différents pour commander (« 02 COMMANDER » dans le bandeau et « COMMANDER UNE AFFICHE » en bas), et le mot « sport » absent de l'accroche.
 Après (prévu) : un seul libellé partout, « Commander une affiche », et l'accroche devient « Sport design & branding — des visuels qui imposent une présence ».
+
+## Itération : proposition A v2
+
+![Proposition A v2](propositions/proposition-A-v2-iteration.png)
+
+Corrections appliquées après l'audit et le test de Marlon :
+
+| Problème | Avant | Après (v2) |
+|---|---|---|
+| Contraste du bouton principal | blanc sur orange, 2,69:1 | texte noir sur orange, **7,11:1** ✅ |
+| Contraste du bandeau | blanc sur orange clair, 2,69:1 | bandeau orange foncé #B84A12, **4,84:1** ✅ |
+| Titre « RÉALISATIONS » | orange #F37227, 2,69:1 | orange foncé #B84A12, **4,84:1** ✅ |
+| Puce de filtre active | texte blanc sur orange | texte noir sur orange, **7,11:1** ✅ |
+| Deux boutons « Commander » | « 02 COMMANDER » + « COMMANDER UNE AFFICHE » | un seul : « Commander une affiche » (le 02 devient « Avis ») |
+| « Sport » invisible | « Des visuels qui imposent une présence » | « Sport design & branding — des visuels qui imposent une présence » |
