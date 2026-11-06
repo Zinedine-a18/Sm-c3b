@@ -1,0 +1,4 @@
+Nimbus Sans — Copyright URW++ Design and Development GmbH.
+Police distribuée sous licence GNU AGPL v3 avec exception pour les polices
+(paquet URW base35 : https://github.com/ArtifexSoftware/urw-base35-fonts).
+Fichiers convertis au format WOFF2 sans modification des glyphes.
