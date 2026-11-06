@@ -1,0 +1,368 @@
+/* =========================================================
+   ZL DESIGN — Page d'accueil
+   Mobile first (390 px) · Flexbox · CSS Grid · Variables
+   ========================================================= */
+
+/* 0. Police Nimbus Sans (hébergée dans app/fonts, licence dans fonts/LICENCE.txt) */
+@font-face {
+  font-family: "Nimbus Sans";
+  src: url("fonts/NimbusSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nimbus Sans";
+  src: url("fonts/NimbusSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nimbus Sans";
+  src: url("fonts/NimbusSans-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 1. Variables (couleurs du brandboard ZL Design) */
+:root {
+  --fond: #FAF5FA;
+  --texte: #030304;
+  --texte-doux: #555;          /* 7,1:1 sur le fond */
+  --accent: #F37227;           /* orange ZL, texte noir dessus (7,1:1) */
+  --accent-fonce: #B84A12;     /* orange foncé, texte blanc dessus (4,8:1) */
+  --blanc: #FFFFFF;
+  --erreur: #B3261E;
+
+  --police: "Nimbus Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --espace-s: 8px;
+  --espace-m: 16px;
+  --espace-l: 32px;
+  --rayon: 18px;
+  --cible: 48px;               /* taille minimale des boutons */
+}
+
+/* 2. Base */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--police);
+  background: var(--fond);
+  color: var(--texte);
+  line-height: 1.5;
+  padding-bottom: 96px;        /* place pour le bouton fixe */
+}
+
+h1, h2, h3, p { margin: 0; }
+ul { list-style: none; margin: 0; padding: 0; }
+a { color: inherit; }
+
+/* Focus clavier bien visible partout */
+:focus-visible {
+  outline: 3px solid var(--texte);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--espace-m);
+  top: -60px;
+  background: var(--texte);
+  color: var(--blanc);
+  padding: var(--espace-s) var(--espace-m);
+  z-index: 10;
+}
+.skip-link:focus { top: var(--espace-s); }
+
+/* 3. En-tête (Flexbox) */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--espace-m);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-decoration: none;
+  color: var(--accent-fonce);
+}
+.logo span { color: var(--texte); }
+
+.nav {
+  display: flex;
+  gap: var(--espace-s);
+}
+.nav a {
+  display: flex;
+  align-items: center;
+  min-height: var(--cible);
+  padding: 0 var(--espace-s);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+}
+.nav a:hover { color: var(--accent-fonce); }
+
+/* 4. Bandeau d'accueil */
+.hero {
+  margin: 0 var(--espace-m);
+  padding: var(--espace-l) var(--espace-m) var(--espace-m);
+  min-height: 330px;
+  border-radius: 22px;
+  background: radial-gradient(ellipse at 30% 20%, #C2541A, var(--accent-fonce) 45%, #9E3F0F);
+  color: var(--blanc);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: var(--espace-m);
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  line-height: 0.92;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.hero__accroche { font-style: italic; }
+
+.hero__liens {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--espace-s);
+}
+.hero__liens a {
+  display: block;
+  min-height: 56px;
+  padding: var(--espace-s);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.hero__liens a:hover { background: rgba(255, 255, 255, 0.25); }
+.hero__liens small { display: block; font-weight: 400; }
+.hero__liens a:focus-visible { outline-color: var(--blanc); }
+
+/* 5. Sections */
+.section { padding: var(--espace-l) var(--espace-m) 0; }
+
+.section__titre {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--espace-m);
+  margin-bottom: var(--espace-m);
+}
+.section__titre h2 {
+  font-size: 1.75rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.section__titre h2 span { display: block; color: var(--accent-fonce); }
+.section__sous-titre {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--texte-doux);
+  text-align: right;
+}
+
+/* 6. Filtres (Flexbox) */
+.filtres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espace-s);
+}
+.filtre {
+  min-height: var(--cible);
+  padding: 0 20px;
+  border: 2px solid var(--texte);
+  border-radius: 40px;
+  background: transparent;
+  color: var(--texte);
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.filtre[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--texte);
+}
+.filtre:hover { border-color: var(--accent-fonce); }
+
+.compteur {
+  margin: var(--espace-m) 0;
+  font-size: 0.85rem;
+  color: var(--texte-doux);
+}
+
+/* 7. Grille des réalisations (CSS Grid) */
+.grille {
+  display: grid;
+  grid-template-columns: 1fr;          /* mobile : 1 colonne */
+  gap: var(--espace-m);
+}
+
+.carte {
+  position: relative;
+  display: block;
+  height: 230px;
+  border-radius: var(--rayon);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--blanc);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.carte:hover,
+.carte:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(3, 3, 4, 0.25);
+}
+
+.carte__visuel {
+  position: absolute;
+  inset: 0;
+}
+.carte__visuel::after {               /* voile sombre pour lire le texte */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(3, 3, 4, 0.92), rgba(3, 3, 4, 0.15) 70%);
+}
+
+/* Visuels provisoires (remplacés par les vraies images en s10) */
+.visuel--1 { background: linear-gradient(135deg, var(--accent) 0 40%, #1a1a1a 40%); }
+.visuel--2 { background: linear-gradient(160deg, #f4e9df, #d9c5b4); }
+.visuel--3 { background: radial-gradient(circle at 30% 40%, var(--fond) 0 20%, transparent 21%), linear-gradient(#3a3a3e, #111); }
+.visuel--4 { background: repeating-linear-gradient(-45deg, #1d1d1f 0 14px, #2a2a2d 14px 28px); }
+.visuel--5 { background: linear-gradient(160deg, var(--accent), #7a2d05); }
+.visuel--6 { background: linear-gradient(135deg, #2b2b30 0 50%, var(--accent-fonce) 50%); }
+
+.carte__num {
+  position: absolute;
+  top: 12px;
+  left: var(--espace-m);
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.carte__texte {
+  position: absolute;
+  left: var(--espace-m);
+  right: var(--espace-m);
+  bottom: var(--espace-m);
+}
+.carte__cat {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);               /* orange sur fond sombre : 7,1:1 */
+}
+.carte h3 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+.carte__prix { font-size: 0.85rem; }
+
+/* 8. Avis (CSS Grid) */
+.avis {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espace-m);
+}
+.avis__carte {
+  padding: var(--espace-m);
+  border: 1px solid #e2d9e2;
+  border-radius: var(--rayon);
+  background: var(--blanc);
+}
+.avis__note { color: var(--accent-fonce); letter-spacing: 3px; }
+.avis__auteur { margin-top: var(--espace-s); font-size: 0.85rem; color: var(--texte-doux); }
+
+/* 9. Pied de page */
+.footer {
+  margin-top: var(--espace-l);
+  padding: var(--espace-l) var(--espace-m);
+  background: var(--texte);
+  color: var(--fond);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-m);
+}
+.footer__titre { font-size: 1.4rem; font-weight: 700; }
+.footer__liens { display: flex; gap: var(--espace-m); }
+.footer__liens a {
+  display: flex;
+  align-items: center;
+  min-height: var(--cible);
+  font-weight: 700;
+}
+.footer a:focus-visible { outline-color: var(--fond); }
+.footer__copy { font-size: 0.8rem; color: #c9c2c9; }
+
+/* 10. Bouton principal fixe */
+.cta {
+  position: fixed;
+  left: var(--espace-m);
+  right: var(--espace-m);
+  bottom: var(--espace-m);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 56px;
+  border-radius: 40px;
+  background: var(--accent);
+  color: var(--texte);                /* 7,1:1 */
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 10px 22px rgba(243, 114, 39, 0.4);
+}
+.cta:hover { background: #ff8a45; }
+
+/* 11. Tablette : 2 colonnes */
+@media (min-width: 600px) {
+  .grille { grid-template-columns: repeat(2, 1fr); }
+  .avis { grid-template-columns: repeat(2, 1fr); }
+  .hero h1 { font-size: 4.5rem; }
+}
+
+/* 12. Ordinateur : 3 colonnes, page centrée */
+@media (min-width: 960px) {
+  body { max-width: 1100px; margin: 0 auto; padding-bottom: 0; }
+  .grille { grid-template-columns: repeat(3, 1fr); }
+  .hero { min-height: 420px; }
+  .cta {
+    position: static;
+    width: max-content;
+    margin: var(--espace-l) auto 0;
+    padding: 0 var(--espace-l);
+  }
+}
+
+/* Respect du réglage « réduire les animations » */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
