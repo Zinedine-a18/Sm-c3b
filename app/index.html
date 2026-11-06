@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZL DESIGN — Sport design & branding</title>
+  <meta name="description" content="Portfolio et commande d'affiches sport design et branding pour clubs, athlètes et associations.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- En-tête : logo + navigation (Flexbox) -->
+  <header class="header">
+    <a class="logo" href="index.html" aria-label="ZL DESIGN, accueil">ZL<span>.</span></a>
+    <nav aria-label="Navigation principale">
+      <ul class="nav">
+        <li><a href="#realisations">Portfolio</a></li>
+        <li><a href="#avis">Avis</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu">
+
+    <!-- Bandeau d'accueil -->
+    <section class="hero" aria-labelledby="titre-hero">
+      <h1 id="titre-hero">ZL<br>Design</h1>
+      <p class="hero__accroche">Sport design &amp; branding — des visuels qui imposent une présence</p>
+      <ul class="hero__liens">
+        <li><a href="#realisations"><small>01</small>Portfolio</a></li>
+        <li><a href="#avis"><small>02</small>Avis</a></li>
+        <li><a href="#contact"><small>03</small>Contact</a></li>
+      </ul>
+    </section>
+
+    <!-- Réalisations : filtres (Flexbox) + cartes (Grid) -->
+    <section id="realisations" class="section" aria-labelledby="titre-realisations">
+      <div class="section__titre">
+        <h2 id="titre-realisations">Mes <span>réalisations</span></h2>
+        <p class="section__sous-titre">Branding · Sport design</p>
+      </div>
+
+      <div class="filtres" role="group" aria-label="Filtrer les réalisations">
+        <button type="button" class="filtre" aria-pressed="true">Tout</button>
+        <button type="button" class="filtre" aria-pressed="false">Branding</button>
+        <button type="button" class="filtre" aria-pressed="false">Sport</button>
+      </div>
+
+      <p class="compteur">6 réalisations</p>
+
+      <ul class="grille">
+        <li>
+          <a class="carte" href="#">
+            <div class="carte__visuel visuel--1" role="img" aria-label="Affiche de match orange et noire"></div>
+            <span class="carte__num">01</span>
+            <div class="carte__texte">
+              <p class="carte__cat">Sport design · Matchday</p>
+              <h3>Affiche de match</h3>
+              <p class="carte__prix">dès 80 CHF</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="carte" href="#">
+            <div class="carte__visuel visuel--2" role="img" aria-label="Cartes de visite orange et blanches"></div>
+            <span class="carte__num">02</span>
+            <div class="carte__texte">
+              <p class="carte__cat">Branding · Identité</p>
+              <h3>Cartes de visite</h3>
+              <p class="carte__prix">dès 120 CHF</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="carte" href="#">
+            <div class="carte__visuel visuel--3" role="img" aria-label="Visuel de présentation d'un joueur"></div>
+            <span class="carte__num">03</span>
+            <div class="carte__texte">
+              <p class="carte__cat">Sport design · Joueur</p>
+              <h3>Player card</h3>
+              <p class="carte__prix">dès 60 CHF</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="carte" href="#">
+            <div class="carte__visuel visuel--4" role="img" aria-label="Logo et charte graphique d'un club"></div>
+            <span class="carte__num">04</span>
+            <div class="carte__texte">
+              <p class="carte__cat">Branding · Logo</p>
+              <h3>Identité de club</h3>
+              <p class="carte__prix">dès 350 CHF</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="carte" href="#">
+            <div class="carte__visuel visuel--5" role="img" aria-label="Affiche d'événement sportif"></div>
+            <span class="carte__num">05</span>
+            <div class="carte__texte">
+              <p class="carte__cat">Sport design · Événement</p>
+              <h3>Game night</h3>
+              <p class="carte__prix">dès 90 CHF</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="carte" href="#">
+            <div class="carte__visuel visuel--6" role="img" aria-label="Pack de visuels pour les réseaux sociaux"></div>
+            <span class="carte__num">06</span>
+            <div class="carte__texte">
+              <p class="carte__cat">Branding · Réseaux sociaux</p>
+              <h3>Pack Instagram</h3>
+              <p class="carte__prix">dès 150 CHF</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Avis -->
+    <section id="avis" class="section" aria-labelledby="titre-avis">
+      <div class="section__titre">
+        <h2 id="titre-avis">Ils en <span>parlent</span></h2>
+      </div>
+      <ul class="avis">
+        <li class="avis__carte">
+          <p class="avis__note" aria-label="Note : 5 sur 5">★★★★★</p>
+          <p>« Affiche livrée en 3 jours, tout le club a adoré. »</p>
+          <p class="avis__auteur">— Club de basket régional</p>
+        </li>
+        <li class="avis__carte">
+          <p class="avis__note" aria-label="Note : 5 sur 5">★★★★★</p>
+          <p>« Un logo qui nous ressemble enfin. Merci ! »</p>
+          <p class="avis__auteur">— Association sportive</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Bouton principal (fixe en bas sur mobile) -->
+    <a class="cta" href="#">Commander une affiche</a>
+
+  </main>
+
+  <!-- Pied de page + contact -->
+  <footer id="contact" class="footer">
+    <p class="footer__titre">Un projet ? Parlons-en.</p>
+    <ul class="footer__liens">
+      <li><a href="https://www.instagram.com/zl_design.08/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://zinedinelakhbir.ch" target="_blank" rel="noopener">Portfolio</a></li>
+    </ul>
+    <p class="footer__copy">© 2026 ZL DESIGN · Prototype M291</p>
+  </footer>
+
+</body>
+</html>
