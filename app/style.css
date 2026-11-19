@@ -366,3 +366,30 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+/* 13. États de chargement (fetch) */
+.etat {
+  grid-column: 1 / -1;                /* prend toute la largeur de la grille */
+  padding: var(--espace-m);
+  border-radius: var(--rayon);
+  font-weight: 700;
+}
+.etat-chargement { background: var(--blanc); color: var(--texte-doux); }
+.etat-vide { background: var(--blanc); color: var(--texte); border: 2px dashed var(--texte-doux); }
+.etat-erreur { background: #FDECEA; color: var(--erreur); border: 2px solid var(--erreur); }
+
+/* Badge de disponibilité sur les cartes */
+.badge {
+  position: absolute;
+  top: 16px;
+  right: var(--espace-m);
+  z-index: 1;
+  padding: 4px 12px;
+  border-radius: 40px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.badge--dispo { background: var(--accent); color: var(--texte); }       /* 7,1:1 */
+.badge--complet { background: var(--texte); color: var(--fond); border: 1px solid var(--fond); }
