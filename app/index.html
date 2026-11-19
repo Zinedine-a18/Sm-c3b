@@ -49,76 +49,12 @@
         <button type="button" class="filtre" aria-pressed="false">Sport</button>
       </div>
 
-      <p class="compteur">6 réalisations</p>
+      <p class="compteur" id="compteur" aria-live="polite"></p>
 
-      <ul class="grille">
-        <li>
-          <a class="carte" href="#">
-            <div class="carte__visuel visuel--1" role="img" aria-label="Affiche de match orange et noire"></div>
-            <span class="carte__num">01</span>
-            <div class="carte__texte">
-              <p class="carte__cat">Sport design · Matchday</p>
-              <h3>Affiche de match</h3>
-              <p class="carte__prix">dès 80 CHF</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="carte" href="#">
-            <div class="carte__visuel visuel--2" role="img" aria-label="Cartes de visite orange et blanches"></div>
-            <span class="carte__num">02</span>
-            <div class="carte__texte">
-              <p class="carte__cat">Branding · Identité</p>
-              <h3>Cartes de visite</h3>
-              <p class="carte__prix">dès 120 CHF</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="carte" href="#">
-            <div class="carte__visuel visuel--3" role="img" aria-label="Visuel de présentation d'un joueur"></div>
-            <span class="carte__num">03</span>
-            <div class="carte__texte">
-              <p class="carte__cat">Sport design · Joueur</p>
-              <h3>Player card</h3>
-              <p class="carte__prix">dès 60 CHF</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="carte" href="#">
-            <div class="carte__visuel visuel--4" role="img" aria-label="Logo et charte graphique d'un club"></div>
-            <span class="carte__num">04</span>
-            <div class="carte__texte">
-              <p class="carte__cat">Branding · Logo</p>
-              <h3>Identité de club</h3>
-              <p class="carte__prix">dès 350 CHF</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="carte" href="#">
-            <div class="carte__visuel visuel--5" role="img" aria-label="Affiche d'événement sportif"></div>
-            <span class="carte__num">05</span>
-            <div class="carte__texte">
-              <p class="carte__cat">Sport design · Événement</p>
-              <h3>Game night</h3>
-              <p class="carte__prix">dès 90 CHF</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="carte" href="#">
-            <div class="carte__visuel visuel--6" role="img" aria-label="Pack de visuels pour les réseaux sociaux"></div>
-            <span class="carte__num">06</span>
-            <div class="carte__texte">
-              <p class="carte__cat">Branding · Réseaux sociaux</p>
-              <h3>Pack Instagram</h3>
-              <p class="carte__prix">dès 150 CHF</p>
-            </div>
-          </a>
-        </li>
-      </ul>
+      <!-- Les cartes sont générées par js/app.js à partir de data.json (fetch) -->
+      <section id="liste-cartes" class="grille" aria-live="polite">
+        <noscript><p class="etat-erreur">Activez JavaScript pour voir les réalisations.</p></noscript>
+      </section>
     </section>
 
     <!-- Avis -->
@@ -155,5 +91,6 @@
     <p class="footer__copy">© 2026 ZL DESIGN · Prototype M291</p>
   </footer>
 
+  <script src="js/app.js"></script>
 </body>
 </html>
